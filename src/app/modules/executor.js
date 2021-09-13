@@ -1,4 +1,5 @@
-import Calculator from "./calculator.js";
+// eslint-disable-next-line no-undef
+const calculator = require('./calculator.js');
 import AdditionCommand from "./all_commands/addition_command.js";
 import SubtractionOperation from "./all_commands/subtraction_operation.js";
 import AllClean from "./all_commands/all_clean.js";
@@ -23,7 +24,7 @@ import CorrectFraction from "./all_commands/correct_fraction.js";
 
 export default class Executor {
     constructor() {
-        this.calculator = new Calculator();
+        this.calculator = calculator;
         this.commands = [];
         this.command = null;
     }

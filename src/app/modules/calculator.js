@@ -1,4 +1,4 @@
-export default class Calculator {
+class Calculator {
     constructor(){
         this.result = 0;
         this.memory = 0;
@@ -162,3 +162,6 @@ export default class Calculator {
     }
 
 }
+
+// eslint-disable-next-line no-undef
+module.exports = new Calculator();
