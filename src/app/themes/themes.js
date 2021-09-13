@@ -10,5 +10,4 @@ export default function changeTheme(theme) {
     [...operator].forEach(operator => operator.classList.add = `operator_${theme}`);
     [...number].forEach(number => number.classList.remove = `number_${thisClassName}`);
     [...number].forEach(number => number.classList.add = `number_${theme}`);
-    console.log(thisClassName);
 }

@@ -23,7 +23,7 @@ class Calculator {
 
     changeSign(value) {
         if(value < 0) {
-            this.setTempResult = Math.abs(value);
+            this.tempResult = Math.abs(value);
         } else {
             this.tempResult = value * -1;
         }
