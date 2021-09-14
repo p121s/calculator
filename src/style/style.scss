@@ -1,5 +1,13 @@
-$colorLightGray: lightgray;
-$colorDarkGray: rgb(80, 80, 80);
+$calculatorColorLight: lightgray;
+$calculatorColorDark: rgb(80, 80, 80);
+$backGroundDisplayLight: linear-gradient(180deg, rgb(201, 201, 201), rgb(221, 221, 221));
+$backGroundDisplayDark: linear-gradient(180deg, rgb(85, 85, 85), rgb(95, 95, 95));
+$buttonColorLight: $calculatorColorLight;
+$buttonColorDark: dimgray;
+$buttonNumberColorLight: rgb(190, 190, 190);
+$buttonNumberColorDark: rgb(65, 65, 65);
+$buttonOperatorColorLight: tomato;
+$buttonOperatorColorDark: orange;
 
 * {
     font-size: 16px;
@@ -11,17 +19,17 @@ $colorDarkGray: rgb(80, 80, 80);
 }
 
 .calculator_light {
-    background-color: $colorLightGray;
+    background-color: $calculatorColorLight;
     color: #565656;
 }
 
 .calculator_dark {
-    background-color: $colorDarkGray;
+    background-color: $calculatorColorDark;
     color: white;
 }
 
 #button_dark {
-    background-color: $colorDarkGray;
+    background-color: $calculatorColorDark;
     color: white;
 }
 
@@ -33,12 +41,12 @@ $colorDarkGray: rgb(80, 80, 80);
 }
 
 .display_light {
-    background: linear-gradient(180deg, rgb(201, 201, 201), rgb(221, 221, 221));
+    background: $backGroundDisplayLight;
     color: #565656;
 }
 
 .display_dark {
-    background: linear-gradient(180deg, rgb(85, 85, 85), rgb(95, 95, 95));
+    background: $backGroundDisplayDark;
     color: white;
 }
 
@@ -61,17 +69,18 @@ button {
 }
 
 .button_light {
-    background-color: $colorLightGray;
+    background-color: $buttonColorLight;
 }
 
 .button_dark {
-    background-color: dimgray;
+    background-color: $buttonColorDark;
     color: white;
+    border: 1px solid rgb(120, 120, 120);
 }
 
 button:hover,
 #button_dark:hover {
-    background-color: honeydew;
+    background-color: rgb(218, 253, 255);
     color: #565656;
 }
 
@@ -81,17 +90,17 @@ button:nth-child(47) {
 }
 
 .number_light {
-    background-color: rgb(190, 190, 190);
+    background-color: $buttonNumberColorLight;
 }
 
 .number_dark {
-    background-color: rgb(65, 65, 65);
+    background-color: $buttonNumberColorDark;
 }
 
 .operator_light {
-    background-color: tomato;
+    background-color: $buttonOperatorColorLight;
 }
 
 .operator_dark {
-    background-color: orange;
+    background-color: $buttonOperatorColorDark;
 }
