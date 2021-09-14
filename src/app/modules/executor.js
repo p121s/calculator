@@ -22,7 +22,7 @@ import DecimalLogarithm from "./all_commands/ten_to_the_power_of_x.js";
 import TenToThePowerOfX from "./all_commands/ten_to_the_power_of_x.js";
 import CorrectFraction from "./all_commands/correct_fraction.js";
 
-class Executor {
+export default class Executor {
     constructor() {
         this.calculator = new Calculator();
         this.commands = [];
@@ -188,6 +188,3 @@ class Executor {
         this.calculator.setTempResult(value);
     }
 }
-
-// eslint-disable-next-line no-undef
-module.exports = new Executor();
