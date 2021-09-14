@@ -32,13 +32,13 @@ export default class Executor {
     memoryAdd(value) {
         this.command = new MemoryAdd(value);
         this.commands.push(this.command);
-        this.calculator.setMemory(this.command.execute());
+        this.calculator.setMemory(this.calculator.getMemory() + this.command.execute());
     }
 
     memoryMinus(value) {
         this.command = new MemoryMinus(value);
         this.commands.push(this.command);
-        this.calculator.setMemory(this.command.execute());
+        this.calculator.setMemory(this.calculator.getMemory() - this.command.execute());
     }
 
     memoryClear() {
