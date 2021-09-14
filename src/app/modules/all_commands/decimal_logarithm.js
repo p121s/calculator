@@ -1,9 +1,8 @@
 import Calculator from '../calculator.js';
 
 export default class DecimalLogarithm extends Calculator {
-    constructor(calculator, value) {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 

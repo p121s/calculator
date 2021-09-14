@@ -3,6 +3,14 @@
  * https://jestjs.io/docs/configuration
  */
 
+const config = {
+    verbose: true
+};
+  
+// eslint-disable-next-line no-undef
+module.exports = config;
+
+
 // eslint-disable-next-line no-undef
 module.exports = {
     // All imported modules in your tests should be mocked automatically

@@ -1,115 +1,115 @@
 // eslint-disable-next-line no-undef
-const calc = require('./src/app/modules/calculator.js');
+
+import AdditionCommand from "./src/app/modules/all_commands/addition_command";
+import CalculatePercentages from "./src/app/modules/all_commands/calculate_percentages";
+import CorrectFraction from "./src/app/modules/all_commands/correct_fraction";
+import CubicRoot from "./src/app/modules/all_commands/cubic_root";
+import Cubing from "./src/app/modules/all_commands/cubing";
+import CustomRoots from "./src/app/modules/all_commands/custom_roots";
+import DecimalLogarithm from "./src/app/modules/all_commands/decimal_logarithm";
+import DivisionOperation from "./src/app/modules/all_commands/division_operation";
+import Exhibitor from "./src/app/modules/all_commands/exhibitor";
+import MultiplicationOperation from "./src/app/modules/all_commands/multiplication_operation";
+import NaturalLogarithm from "./src/app/modules/all_commands/natural_logarithm";
+import NumberToThePowerOf from "./src/app/modules/all_commands/number_to_the_oower_of";
+import SquareRoot from "./src/app/modules/all_commands/squareRoot";
+import Squaring from "./src/app/modules/all_commands/squaring";
+import SubtractionOperation from "./src/app/modules/all_commands/subtraction_operation";
+import TenToThePowerOfX from "./src/app/modules/all_commands/ten_to_the_power_of_x";
+
 
 // eslint-disable-next-line no-undef
 test('Addition operation', () => {
-    calc.additionOperation(3, 6);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(9);
+    expect(new AdditionCommand(4, 5).execute()).toBe(9);
 });
 
 // eslint-disable-next-line no-undef
 test('Subtraction operation', () => {
-    calc.subtractionOperation(19, 6);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(13);
+    expect(new SubtractionOperation(19, 6).execute()).toBe(13);
 });
 
 // eslint-disable-next-line no-undef
 test('Muliplication operation', () => {
-    calc.multiplicationOperation(6, 6);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(36);
+    expect(new MultiplicationOperation(6, 6).execute()).toBe(36);
 });
 
 // eslint-disable-next-line no-undef
 test('Division operation', () => {
-    calc.divisionOperation(35, 5);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(7);
+    expect(new DivisionOperation(35, 5).execute()).toBe(7);
 });
 
 // eslint-disable-next-line no-undef
 test('Squaring operation', () => {
-    calc.squaring(5);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(25);
+    expect(new Squaring(5).execute()).toBe(25);
 });
 
 // eslint-disable-next-line no-undef
 test('Cubing operation', () => {
-    calc.cubing(12);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(1728);
+    expect(new Cubing(12).execute()).toBe(1728);
 });
 
 // eslint-disable-next-line no-undef
 test('Number to the power of operation', () => {
-    calc.numberToThePowerOf(5, 6);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(15625);
+    expect(new NumberToThePowerOf(5, 6).execute()).toBe(15625);
 });
 
 // eslint-disable-next-line no-undef
 test('Squaring root operation', () => {
-    calc.squareRoot(144);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(12);
+    expect(new SquareRoot(144).execute()).toBe(12);
 });
 
 // eslint-disable-next-line no-undef
 test('Cubic root operation', () => {
-    calc.cubicRoot(27);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(3);
+    expect(new CubicRoot(27).execute()).toBe(3);
 });
 
 // eslint-disable-next-line no-undef
 test('Custom root operation', () => {
-    calc.customRoots(4, 256);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(4);
+    expect(new CustomRoots(4, 256).execute()).toBe(4);
 });
 
 // eslint-disable-next-line no-undef
 test('Exhibitor operation', () => {
-    calc.exhibitor(8);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(2980.9579870417283);
+    expect(new Exhibitor(8).execute()).toBe(2980.9579870417283);
 });
-
 
 // eslint-disable-next-line no-undef
 test('Natural logarithm operation', () => {
-    calc.naturalLogarithm(6);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(1.791759469228055);
+    expect(new NaturalLogarithm(6).execute()).toBe(1.791759469228055);
 });
 
 // eslint-disable-next-line no-undef
 test('Decimal logarithm operation', () => {
-    calc.decimalLogarithm(14);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(1.146128035678238);
+    expect(new DecimalLogarithm(14).execute()).toBe(1.146128035678238);
 });
 
 // eslint-disable-next-line no-undef
 test('Ten to the power of X operation', () => {
-    calc.tenToThePowerOfX(14);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(100000000000000);
+    expect(new TenToThePowerOfX(14).execute()).toBe(100000000000000);
 });
 
 // eslint-disable-next-line no-undef
 test('Correct fraction operation', () => {
-    calc.correctFraction(9);
     // eslint-disable-next-line no-undef
-    expect(calc.result).toBe(0.1111111111111111);
+    expect(new CorrectFraction(9).execute()).toBe(0.1111111111111111);
 });
 
 // eslint-disable-next-line no-undef
 test('Calculate percentages operation', () => {
-    calc.calculatePercentages(26);
     // eslint-disable-next-line no-undef
-    expect(calc.tempResult).toBe(0.26);
+    expect(new CalculatePercentages(26).execute()).toBe(0.26);
 });

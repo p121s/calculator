@@ -116,6 +116,7 @@ buttonMemoryAdd.addEventListener('click', () => {
     if (!isNaN(display.innerHTML)) {
         accountant.memoryAdd(+display.innerHTML);
     }
+    buttomMemoryClear.style.backgroundColor = 'green';
 });
 
 buttomMemoryMinus.addEventListener('click', () => {
