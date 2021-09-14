@@ -13,6 +13,7 @@ export const calculator = document.getElementById('calculator');
 export const displayTheme = document.getElementById('display');
 export const buttOperator = document.getElementsByClassName(`operator`);
 export const buttNumber = document.getElementsByClassName(`number`);
+export const allButton = document.getElementsByTagName('button');
 
 const buttonAllClear = document.getElementById('all_clean');
 const buttonFloatPoint = document.getElementsByClassName('floating_point');
@@ -116,17 +117,21 @@ buttonMemoryAdd.addEventListener('click', () => {
     if (!isNaN(display.innerHTML)) {
         accountant.memoryAdd(+display.innerHTML);
     }
-    buttomMemoryClear.style.backgroundColor = 'green';
+    buttonMemoryRead.style.backgroundColor = 'skyblue';
 });
 
 buttomMemoryMinus.addEventListener('click', () => {
     if (!isNaN(display.innerHTML)) {
         accountant.memoryMinus(+user.getValue());
     }
+
+    buttonMemoryRead.style.backgroundColor = 'skyblue';
 });
 
 buttomMemoryClear.addEventListener('click', () => {
     accountant.memoryClear();
+
+    buttonMemoryRead.style.backgroundColor = 'lightgray';
 });
 
 buttonMemoryRead.addEventListener('click', () => {

@@ -58,16 +58,16 @@ button {
     border: 1px solid rgb(150, 150, 150);
     padding: 5px;
     border-radius: 3px;
+}
+
+.button_light {
     background-color: $colorLightGray;
 }
 
-// .button_light {
-
-// }
-
-// .button_dark {
-    
-// }
+.button_dark {
+    background-color: dimgray;
+    color: white;
+}
 
 button:hover,
 #button_dark:hover {
@@ -80,13 +80,11 @@ button:nth-child(47) {
     grid-column-end: 9;
 }
 
-.number_light,
-.floating_point_light {
+.number_light {
     background-color: rgb(190, 190, 190);
 }
 
-.number_dark,
-.floating_point_dark {
+.number_dark {
     background-color: rgb(65, 65, 65);
 }
 
