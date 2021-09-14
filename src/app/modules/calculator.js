@@ -1,36 +1,34 @@
 export default class Calculator {
-
-    constructor(){
+    constructor() {
         this.result = 0;
         this.memory = 0;
         this.tempResult = 0;
     }
 
-    execute(){}
-    undo(){}
+    execute() {}
+    undo() {}
 
-
-    setResult (value) {
+    setResult(value) {
         this.result = value;
     }
 
-    getResult () {
+    getResult() {
         return this.result;
     }
 
-    setMemory (value) {
+    setMemory(value) {
         this.memory = value;
     }
 
-    getMemory () {
+    getMemory() {
         return this.memory;
     }
 
-    setTempResult (value) {
+    setTempResult(value) {
         this.tempResult = value;
     }
 
-    getTempResult () {
+    getTempResult() {
         return this.tempResult;
     }
 }

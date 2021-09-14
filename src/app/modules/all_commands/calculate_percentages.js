@@ -10,7 +10,5 @@ export default class CalculatePercentages extends Calculator {
         return this.value / 100;
     }
 
-    undo() {
-        
-    }
+    undo() {}
 }

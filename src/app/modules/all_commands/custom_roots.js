@@ -8,12 +8,12 @@ export default class CustomRoots extends Calculator {
     }
 
     execute() {
-        try{
-            if(this.firstValue < 0) {
-                throw new Error("Enter a number greater than 0");
+        try {
+            if (this.firstValue < 0) {
+                throw new Error('Enter a number greater than 0');
             }
             return Math.pow(this.secondValue, 1 / this.firstValue);
-        } catch(e) {
+        } catch (e) {
             alert(e);
         }
     }

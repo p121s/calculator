@@ -7,12 +7,12 @@ export default class DecimalLogarithm extends Calculator {
     }
 
     execute() {
-        try{
-            if(this.value < 1) {
-                throw new Error("Enter a number greater than 0");
+        try {
+            if (this.value < 1) {
+                throw new Error('Enter a number greater than 0');
             }
             return Math.log10(this.value);
-        } catch(e) {
+        } catch (e) {
             alert(e);
         }
     }

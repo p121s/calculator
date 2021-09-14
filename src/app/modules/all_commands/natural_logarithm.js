@@ -7,12 +7,12 @@ export default class NaturalLogarithm extends Calculator {
     }
 
     execute() {
-        try{
-            if(this.value < 1) {
-                throw new Error("Enter a number greater than 0");
+        try {
+            if (this.value < 1) {
+                throw new Error('Enter a number greater than 0');
             }
             return Math.log(this.value);
-        } catch(e) {
+        } catch (e) {
             alert(e);
         }
     }

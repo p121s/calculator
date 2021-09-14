@@ -1,26 +1,26 @@
 // eslint-disable-next-line no-undef
-import Calculator from "./calculator.js";
-import AdditionCommand from "./all_commands/addition_command.js";
-import SubtractionOperation from "./all_commands/subtraction_operation.js";
-import AllClean from "./all_commands/all_clean.js";
-import MultiplicationOperation from "./all_commands/multiplication_operation.js";
-import DivisionOperation from "./all_commands/division_operation.js";
-import MemoryAdd from "./all_commands/memory_add.js";
-import MemoryMinus from "./all_commands/memory_minus.js";
-import MemoryClear from "./all_commands/memory_clear.js";
-import ChangeSign from "./all_commands/change_sign.js";
-import CalculatePercentages from "./all_commands/calculate_percentages.js";
-import Squaring from "./all_commands/squaring.js";
-import SquareRoot from "./all_commands/squareRoot.js";
-import Cubing from "./all_commands/cubing.js";
-import CubicRoot from "./all_commands/cubic_root.js";
-import NumberToThePowerOf from "./all_commands/number_to_the_oower_of.js";
-import CustomRoots from "./all_commands/custom_roots.js";
-import Exhibitor from "./all_commands/exhibitor.js";
-import NaturalLogarithm from "./all_commands/natural_logarithm.js";
-import DecimalLogarithm from "./all_commands/ten_to_the_power_of_x.js";
-import TenToThePowerOfX from "./all_commands/ten_to_the_power_of_x.js";
-import CorrectFraction from "./all_commands/correct_fraction.js";
+import Calculator from './calculator.js';
+import AdditionCommand from './all_commands/addition_command.js';
+import SubtractionOperation from './all_commands/subtraction_operation.js';
+import AllClean from './all_commands/all_clean.js';
+import MultiplicationOperation from './all_commands/multiplication_operation.js';
+import DivisionOperation from './all_commands/division_operation.js';
+import MemoryAdd from './all_commands/memory_add.js';
+import MemoryMinus from './all_commands/memory_minus.js';
+import MemoryClear from './all_commands/memory_clear.js';
+import ChangeSign from './all_commands/change_sign.js';
+import CalculatePercentages from './all_commands/calculate_percentages.js';
+import Squaring from './all_commands/squaring.js';
+import SquareRoot from './all_commands/squareRoot.js';
+import Cubing from './all_commands/cubing.js';
+import CubicRoot from './all_commands/cubic_root.js';
+import NumberToThePowerOf from './all_commands/number_to_the_oower_of.js';
+import CustomRoots from './all_commands/custom_roots.js';
+import Exhibitor from './all_commands/exhibitor.js';
+import NaturalLogarithm from './all_commands/natural_logarithm.js';
+import DecimalLogarithm from './all_commands/ten_to_the_power_of_x.js';
+import TenToThePowerOfX from './all_commands/ten_to_the_power_of_x.js';
+import CorrectFraction from './all_commands/correct_fraction.js';
 
 export default class Executor {
     constructor() {
@@ -156,35 +156,35 @@ export default class Executor {
         this.calculator.setResult(this.command.execute());
     }
 
-    undo () {
+    undo() {
         if (this.commands.length === 0) {
-            throw new Error("Command stack is empty");
+            throw new Error('Command stack is empty');
         }
         this.command = this.commands.pop();
         this.command.undo();
     }
 
-    getCount () {
+    getCount() {
         return this.calculator.getResult();
     }
 
-    setCount (value) {
+    setCount(value) {
         this.calculator.setResult(value);
     }
 
-    getMemoryValue () {
+    getMemoryValue() {
         return this.calculator.getMemory();
     }
 
-    setMemoryValue (value) {
+    setMemoryValue(value) {
         this.calculator.setMemory(value);
     }
 
-    getTempResult () {
+    getTempResult() {
         return this.calculator.getTempResult();
     }
 
-    setTempResult (value) {
+    setTempResult(value) {
         this.calculator.setTempResult(value);
     }
 }

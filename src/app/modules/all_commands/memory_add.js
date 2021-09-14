@@ -6,11 +6,9 @@ export default class MemoryAdd extends Calculator {
         this.value = value;
     }
 
-    
     execute() {
         return this.value;
     }
 
-    undo() {
-    }
+    undo() {}
 }

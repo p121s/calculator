@@ -7,7 +7,7 @@ export default class ChangeSign extends Calculator {
     }
 
     execute() {
-        if(this.value < 0) {
+        if (this.value < 0) {
             return Math.abs(this.value);
         } else {
             return this.value * -1;

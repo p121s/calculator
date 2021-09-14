@@ -12,12 +12,12 @@ export default class MultiplicationOperation extends Calculator {
     }
 
     undo() {
-        try{
+        try {
             if (this.secondValue === 0) {
-                throw new Error("Divide by zero is forbidden");
+                throw new Error('Divide by zero is forbidden');
             }
             return this.firstValue / this.secondValue;
-        } catch(e) {
+        } catch (e) {
             alert(e);
         }
     }

@@ -9,6 +9,5 @@ export default class MemoryClear extends Calculator {
         return 0;
     }
 
-    undo() {
-    }
+    undo() {}
 }

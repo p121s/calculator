@@ -80,10 +80,7 @@ function calculateResult(maxPriority, numbers, operations) {
     let numindex = 1;
     perform.forEach((index, i) => {
         i > 0 ? (index -= numindex++) : index;
-        accountant[operations[index].operation](
-            numbers[index],
-            numbers[index + 1],
-        );
+        accountant[operations[index].operation](numbers[index], numbers[index + 1]);
         numbers.splice(index, 2, accountant.getTempResult());
         accountant.setTempResult(0);
         operations.splice(index, 1);
@@ -210,11 +207,7 @@ buttonNumberToThePowerOf.addEventListener('click', () => {
     maxPriority < numberToThePowerOfPriority
         ? (maxPriority = numberToThePowerOfPriority)
         : maxPriority;
-    clickButtonsOperations(
-        '^',
-        numberToThePowerOfPriority,
-        'numberToThePowerOf',
-    );
+    clickButtonsOperations('^', numberToThePowerOfPriority, 'numberToThePowerOf');
 });
 
 buttonCustomRoots.addEventListener('click', () => {
@@ -277,14 +270,8 @@ buttonMinus.addEventListener('click', () => {
 
 buttonMultiply.addEventListener('click', () => {
     const multiplyPriority = 2 + priority;
-    maxPriority < multiplyPriority
-        ? (maxPriority = multiplyPriority)
-        : maxPriority;
-    clickButtonsOperations(
-        '&#215;',
-        multiplyPriority,
-        'multiplicationOperation',
-    );
+    maxPriority < multiplyPriority ? (maxPriority = multiplyPriority) : maxPriority;
+    clickButtonsOperations('&#215;', multiplyPriority, 'multiplicationOperation');
 });
 
 buttonDivide.addEventListener('click', () => {

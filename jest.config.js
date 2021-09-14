@@ -4,12 +4,11 @@
  */
 
 const config = {
-    verbose: true
+    verbose: true,
 };
-  
+
 // eslint-disable-next-line no-undef
 module.exports = config;
-
 
 // eslint-disable-next-line no-undef
 module.exports = {

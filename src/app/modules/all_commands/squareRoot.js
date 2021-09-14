@@ -8,11 +8,11 @@ export default class SquareRoot extends Calculator {
 
     execute() {
         try {
-            if(this.value < 0) {
-                throw new Error("Enter a number greater than 0");
+            if (this.value < 0) {
+                throw new Error('Enter a number greater than 0');
             }
-            return Math.pow(this.value, 1/2);
-        } catch(e) {
+            return Math.pow(this.value, 1 / 2);
+        } catch (e) {
             alert(e);
         }
     }

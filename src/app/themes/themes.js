@@ -1,4 +1,10 @@
-import { calculator, displayTheme as display, buttOperator as operator, buttNumber as number, allButton } from "../index.js";
+import {
+    calculator,
+    displayTheme as display,
+    buttOperator as operator,
+    buttNumber as number,
+    allButton,
+} from '../index.js';
 
 export default function changeTheme(theme) {
     const thisClassName = theme === 'light' ? 'dark' : 'light';

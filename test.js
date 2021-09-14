@@ -1,22 +1,21 @@
 // eslint-disable-next-line no-undef
 
-import AdditionCommand from "./src/app/modules/all_commands/addition_command";
-import CalculatePercentages from "./src/app/modules/all_commands/calculate_percentages";
-import CorrectFraction from "./src/app/modules/all_commands/correct_fraction";
-import CubicRoot from "./src/app/modules/all_commands/cubic_root";
-import Cubing from "./src/app/modules/all_commands/cubing";
-import CustomRoots from "./src/app/modules/all_commands/custom_roots";
-import DecimalLogarithm from "./src/app/modules/all_commands/decimal_logarithm";
-import DivisionOperation from "./src/app/modules/all_commands/division_operation";
-import Exhibitor from "./src/app/modules/all_commands/exhibitor";
-import MultiplicationOperation from "./src/app/modules/all_commands/multiplication_operation";
-import NaturalLogarithm from "./src/app/modules/all_commands/natural_logarithm";
-import NumberToThePowerOf from "./src/app/modules/all_commands/number_to_the_oower_of";
-import SquareRoot from "./src/app/modules/all_commands/squareRoot";
-import Squaring from "./src/app/modules/all_commands/squaring";
-import SubtractionOperation from "./src/app/modules/all_commands/subtraction_operation";
-import TenToThePowerOfX from "./src/app/modules/all_commands/ten_to_the_power_of_x";
-
+import AdditionCommand from './src/app/modules/all_commands/addition_command';
+import CalculatePercentages from './src/app/modules/all_commands/calculate_percentages';
+import CorrectFraction from './src/app/modules/all_commands/correct_fraction';
+import CubicRoot from './src/app/modules/all_commands/cubic_root';
+import Cubing from './src/app/modules/all_commands/cubing';
+import CustomRoots from './src/app/modules/all_commands/custom_roots';
+import DecimalLogarithm from './src/app/modules/all_commands/decimal_logarithm';
+import DivisionOperation from './src/app/modules/all_commands/division_operation';
+import Exhibitor from './src/app/modules/all_commands/exhibitor';
+import MultiplicationOperation from './src/app/modules/all_commands/multiplication_operation';
+import NaturalLogarithm from './src/app/modules/all_commands/natural_logarithm';
+import NumberToThePowerOf from './src/app/modules/all_commands/number_to_the_oower_of';
+import SquareRoot from './src/app/modules/all_commands/squareRoot';
+import Squaring from './src/app/modules/all_commands/squaring';
+import SubtractionOperation from './src/app/modules/all_commands/subtraction_operation';
+import TenToThePowerOfX from './src/app/modules/all_commands/ten_to_the_power_of_x';
 
 // eslint-disable-next-line no-undef
 test('Addition operation', () => {

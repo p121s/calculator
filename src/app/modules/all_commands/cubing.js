@@ -11,12 +11,12 @@ export default class Cubing extends Calculator {
     }
 
     undo() {
-        try{
-            if(this.value < 0) {
-                throw new Error("Enter a number greater than 0");
+        try {
+            if (this.value < 0) {
+                throw new Error('Enter a number greater than 0');
             }
-            return Math.pow(this.value, 1/3);
-        } catch(e) {
+            return Math.pow(this.value, 1 / 3);
+        } catch (e) {
             alert(e);
         }
     }
