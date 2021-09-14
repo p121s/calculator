@@ -1,18 +1,24 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class MultiplicationOperation extends Command {
-    constructor(calculator, firstValue, secondValue) {
+export default class MultiplicationOperation extends Calculator {
+    constructor(firstValue, secondValue) {
         super();
-        this.calculator = calculator;
         this.firstValue = firstValue;
         this.secondValue = secondValue;
     }
 
     execute() {
-        this.calculator.multiplicationOperation(this.firstValue, this.secondValue);
+        return this.firstValue * this.secondValue;
     }
 
     undo() {
-        this.calculator.divisionOperation(this.firstValue, this.secondValue);
+        try{
+            if (this.secondValue === 0) {
+                throw new Error("Divide by zero is forbidden");
+            }
+            return this.firstValue / this.secondValue;
+        } catch(e) {
+            alert(e);
+        }
     }
 }

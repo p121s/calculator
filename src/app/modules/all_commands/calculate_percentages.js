@@ -1,14 +1,13 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class CalculatePercentages extends Command {
-    constructor(calculator, value) {
+export default class CalculatePercentages extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.calculatePercentages(this.value);
+        return this.value / 100;
     }
 
     undo() {

@@ -1,17 +1,23 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class Squaring extends Command {
-    constructor(calculator, value) {
+export default class Squaring extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.squaring(this.value);
+        return this.value ** 2;
     }
 
     undo() {
-        this.calculator.squareRoot(this.value);
+        try {
+            if(this.value < 0) {
+                throw new Error("Enter a number greater than 0");
+            }
+            return Math.pow(this.value, 1/2);
+        } catch(e) {
+            alert(e);
+        }
     }
 }

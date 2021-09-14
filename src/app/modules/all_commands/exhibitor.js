@@ -1,14 +1,13 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class Exhibitor extends Command {
-    constructor(calculator, value) {
+export default class Exhibitor extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.exhibitor(this.value);
+        return Math.exp(this.value);
     }
 
     undo() {}

@@ -1,17 +1,17 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class MemoryMinus extends Command {
-    constructor(calculator, value) {
+export default class MemoryMinus extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
+        this.memoryValue = this.getMemory();
     }
 
     execute() {
-        this.calculator.memoryMinus(this.value);
+        return this.memoryValue -= this.value;
     }
 
     undo() {
-        this.calculator.memoryAdd(this.value);
+        return this.memoryValue += this.value;
     }
 }

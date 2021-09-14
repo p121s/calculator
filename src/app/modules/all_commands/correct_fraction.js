@@ -1,14 +1,13 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class CorrectFraction extends Command {
-    constructor(calculator, value) {
+export default class CorrectFraction extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.correctFraction(this.value);
+        return 1 / this.value;
     }
 
     undo() {}

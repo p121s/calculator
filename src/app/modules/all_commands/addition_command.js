@@ -1,18 +1,17 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class AdditionCommand extends Command {
-    constructor(calculator, firstValue, secondValue) {
+export default class AdditionCommand extends Calculator {
+    constructor(firstValue, secondValue) {
         super();
-        this.calculator = calculator;
         this.firstValue = firstValue;
         this.secondValue = secondValue;
     }
 
     execute() {
-        this.calculator.additionOperation(this.firstValue, this.secondValue);
+        return this.firstValue + this.secondValue;
     }
 
     undo() {
-        this.calculator.subtractionOperation(this.firstValue, this.secondValue);
+        return this.getTempResult - this.firstValue;
     }
 }

@@ -1,14 +1,20 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class NaturalLogarithm extends Command {
-    constructor(calculator, value) {
+export default class NaturalLogarithm extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.naturalLogarithm(this.value);
+        try{
+            if(this.value < 1) {
+                throw new Error("Enter a number greater than 0");
+            }
+            return Math.log(this.value);
+        } catch(e) {
+            alert(e);
+        }
     }
 
     undo() {}

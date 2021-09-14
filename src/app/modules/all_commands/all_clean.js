@@ -1,13 +1,12 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class AllClean extends Command {
-    constructor(calculator) {
+export default class AllClean extends Calculator {
+    constructor() {
         super();
-        this.calculator = calculator;
     }
 
     execute() {
-        this.calculator.allClean();
+        return 0;
     }
 
     undo() {}

@@ -1,14 +1,17 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class ChangeSign extends Command {
-    constructor(calculator, value) {
+export default class ChangeSign extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        return this.calculator.changeSign(this.value);
+        if(this.value < 0) {
+            return Math.abs(this.value);
+        } else {
+            return this.value * -1;
+        }
     }
 
     undo() {}

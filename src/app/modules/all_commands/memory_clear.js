@@ -1,16 +1,14 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class MemoryClear extends Command {
-    constructor(calculator) {
+export default class MemoryClear extends Calculator {
+    constructor() {
         super();
-        this.calculator = calculator;
     }
 
     execute() {
-        this.calculator.memoryClear();
+        return 0;
     }
 
     undo() {
-        this.calculator.memoryMinus(this.value);
     }
 }

@@ -1,14 +1,13 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class DecimalLogarithm extends Command {
-    constructor(calculator, value) {
+export default class TenToThePowerOfX extends Calculator {
+    constructor(value) {
         super();
-        this.calculator = calculator;
         this.value = value;
     }
 
     execute() {
-        this.calculator.decimalLogarithm(this.value);
+        return 10 ** this.value;
     }
 
     undo() {}

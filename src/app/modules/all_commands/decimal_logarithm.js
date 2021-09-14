@@ -1,6 +1,6 @@
-import Command from '../command.js';
+import Calculator from '../calculator.js';
 
-export default class TenToThePowerOfX extends Command {
+export default class DecimalLogarithm extends Calculator {
     constructor(calculator, value) {
         super();
         this.calculator = calculator;
@@ -8,7 +8,14 @@ export default class TenToThePowerOfX extends Command {
     }
 
     execute() {
-        this.calculator.tenToThePowerOfX(this.value);
+        try{
+            if(this.value < 1) {
+                throw new Error("Enter a number greater than 0");
+            }
+            return Math.log10(this.value);
+        } catch(e) {
+            alert(e);
+        }
     }
 
     undo() {}
