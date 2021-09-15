@@ -283,10 +283,10 @@ buttonDivide.addEventListener('click', () => {
 buttonResult.addEventListener('click', () => {
     numbers.push(+user.getValue());
     accountant.setCount(calculateResult(maxPriority, numbers, operations));
-    user.setValue(accountant.getCount());
+    user.setValue('' + accountant.getCount());
     numbers = [];
     operations = [];
-    displayString = accountant.getCount();
+    displayString = user.getValue();
     display.innerHTML = displayString;
     accountant.setCount(0);
     flagFloatPoint = false;
@@ -318,10 +318,13 @@ buttonAllClear.addEventListener('click', () => {
 
 [...buttNumber].forEach(button =>
     button.addEventListener('click', () => {
-        if (user.getValue() === '0' && displayString === '0') {
+        console.log(user.getValue(), displayString, display.innerHTML);
+        if (user.getValue() === '0' && displayString === '0' && display.innerHTML === '0') {
             user.setValue('');
             displayString = '';
+            display.innerHTML = '';
         }
+        console.log(user.getValue(), displayString, display.innerHTML);
         user.setValue(user.getValue() + button.innerHTML);
         displayString += button.innerHTML;
         display.innerHTML = displayString;
