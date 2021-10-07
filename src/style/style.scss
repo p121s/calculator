@@ -92,11 +92,13 @@ button:nth-child(47) {
     grid-column-end: 9;
 }
 
-.number_light {
+.number_light,
+.floating_point_light {
     background-color: $buttonNumberColorLight;
 }
 
-.number_dark {
+.number_dark,
+.floating_point_dark {
     background-color: $buttonNumberColorDark;
 }
 

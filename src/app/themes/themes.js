@@ -4,6 +4,7 @@ import {
     buttOperator as operator,
     buttNumber as number,
     allButton,
+    buttonFloatPoint
 } from '../index.js';
 
 export default function changeTheme(theme) {
@@ -12,6 +13,8 @@ export default function changeTheme(theme) {
     calculator.className = `calculator_${theme}`;
     display.className = '';
     display.className = `display_${theme}`;
+    [...buttonFloatPoint][0].classList.remove(`floating_point_${thisClassName}`);
+    [...buttonFloatPoint][0].classList.add(`floating_point_${theme}`);
     [...allButton].forEach(operator => operator.classList.remove(`button_${thisClassName}`));
     [...allButton].forEach(operator => operator.classList.add(`button_${theme}`));
     [...operator].forEach(operator => operator.classList.remove(`operator_${thisClassName}`));

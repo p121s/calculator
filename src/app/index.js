@@ -14,9 +14,9 @@ export const displayTheme = document.getElementById('display');
 export const buttOperator = document.getElementsByClassName(`operator`);
 export const buttNumber = document.getElementsByClassName(`number`);
 export const allButton = document.getElementsByTagName('button');
+export const buttonFloatPoint = document.getElementsByClassName('floating_point');
 
 const buttonAllClear = document.getElementById('all_clean');
-const buttonFloatPoint = document.getElementsByClassName('floating_point');
 const display = document.getElementById('display').children[0];
 const buttonAdd = document.getElementById('add');
 const buttonMinus = document.getElementById('minus');
@@ -306,10 +306,12 @@ buttonAllClear.addEventListener('click', () => {
 
 [...buttonFloatPoint][0].addEventListener('click', () => {
     if (!flagFloatPoint) {
-        if (user.getValue() === '') {
+        if (user.getValue() === '0') {
             user.setValue(`0${[...buttonFloatPoint][0].innerHTML}`);
+            flagFloatPoint = true;
+        } else{
+            user.setValue(user.getValue() + [...buttonFloatPoint][0].innerHTML);
         }
-        user.setValue(user.getValue() + [...buttonFloatPoint][0].innerHTML);
         displayString += [...buttonFloatPoint][0].innerHTML;
         display.innerHTML = displayString;
         flagFloatPoint = true;
@@ -318,13 +320,11 @@ buttonAllClear.addEventListener('click', () => {
 
 [...buttNumber].forEach(button =>
     button.addEventListener('click', () => {
-        console.log(user.getValue(), displayString, display.innerHTML);
         if (user.getValue() === '0' && displayString === '0' && display.innerHTML === '0') {
             user.setValue('');
             displayString = '';
             display.innerHTML = '';
         }
-        console.log(user.getValue(), displayString, display.innerHTML);
         user.setValue(user.getValue() + button.innerHTML);
         displayString += button.innerHTML;
         display.innerHTML = displayString;
